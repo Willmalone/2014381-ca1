@@ -4,7 +4,6 @@ $name = $_POST['studentname'];
 $sid = $_POST['sid'];
 
 // ------------ send to the database --------------
-
  try {
      $host = '127.0.0.1';
      $dbname = 'test';
@@ -19,20 +18,7 @@ $sth = $DBH->prepare($sql);
  $sth->bindParam(2, $sid, PDO::PARAM_INT);
 
  $sth->execute();
-
- 
+  
   echo $id = $DBH->lastInsertId();
  } catch(PDOException $e) {echo 'Error' . $e;} 
-
-
- 
- 
-
- 
- 
- 
- 
- 
- 
- 
 ?>
